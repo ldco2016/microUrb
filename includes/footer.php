@@ -5,7 +5,8 @@
 						</div><!-- column -->
 						<div class="column three">
 							<strong>Location</strong>
-							<!-- location to go here -->
+							131 Vassar Ave.<br>
+							Stratford, NJ 08084
 						</div><!-- column -->
 						<div class="column three last">
 							<strong>Hours</strong>
