@@ -50,6 +50,10 @@ h1 small {
 	color: #666;
 }
 
+h1.contact {
+	font-weight: 200;
+}
+
 h2 + p {
 	margin-top: -20px;
 }
@@ -211,7 +215,7 @@ input {
 	text-rendering: optimizelegibility;
 }
 
-autton, input.button {
+a.button, input.button {
 	display: inline-block;
 	background: #ccc;
 	outline: solid 2px #ccc;

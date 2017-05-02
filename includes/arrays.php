@@ -38,22 +38,22 @@
 
 	// Product Items
 	$productItems = array(
-						"bread-butter-mix" => array(
+						"bread-butter" => array(
 							'title' 		=> "Bread & Butter Mix<sup>&reg;</sup>",
 							'blurb' 	=>	"Sunflower Shoots & Pea Shoots",
 							// 'img' 		=> "daniel"
 						),
-						"salad-mix" => array(
+						"salad" => array(
 							'title' 		=> "Salad Mix",
 							'blurb' 	=>	"Swiss Chard, Pak Choi and Radish",
 							// 'img' 		=> "daniel"
 						),
-						"spicy-mix" => array(
+						"spicy" => array(
 							'title' 		=> "Spicy Mix",
 							'blurb' 	=>	"Daikon, Mustard and Arugula",
 							// 'img' 		=> "daniel"
 						),
-						"herbal-mix" => array(
+						"herbal" => array(
 							'title' 		=> "Herbal Mix",
 							'blurb' 	=>	"Basil, Celery, Chervil",
 							// 'img' 		=> "daniel"
