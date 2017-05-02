@@ -1,4 +1,5 @@
 <?php
+	$companyName = 'MicroUrb';
 	include('includes/arrays.php');
 ?>
 
