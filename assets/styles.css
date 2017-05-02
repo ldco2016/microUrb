@@ -94,7 +94,7 @@ hr {
 	border: none;
 	height: 18px;
 	width: 114px;
-	background-image: url('./img/hr.png') center center no-repeat;
+	background: url('./img/hr.png') center center no-repeat;
 	margin: 20px auto;
 }
 
@@ -380,7 +380,7 @@ input.button.next {
 #final-example .member {
 	width: 203px;
 	float: left;
-	margin-right: 45px;
+	margin-right: 275px;
 }
 
 #final-example .member:last-child {

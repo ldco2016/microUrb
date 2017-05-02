@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MicroUrb</title>
+	<title><?php echo TITLE; ?></title>
 	<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body id="final-example">
