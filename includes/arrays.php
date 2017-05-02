@@ -23,17 +23,41 @@
 	// Team Members
 	$teamMembers = array(
 						array(
-							name 		=> "Daniel",
-							position 	=>	"Owner",
-							bio 		=> "Daniel is the owner of MicroUrb. He loves cooking Indian food with fresh ingredients.",
-							img 		=> "daniel"
+							'name' 		=> "Daniel",
+							'position' 	=>	"Owner",
+							'bio' 		=> "Daniel is the owner of MicroUrb. He loves cooking Indian food with fresh ingredients.",
+							'img' 		=> "daniel"
 						),
 						array(
-							name 		=> "Alejandra",
-							position 	=>	"Co-owner",
-							bio 		=> "Alejandra, or Ale as she is called, is the co-owner of MicroUrb. She is from a small town in Colombia where if it wasn't grown locally, they never heard of it.",
-							img 		=> "ale"
+							'name' 		=> "Alejandra",
+							'position' 	=>	"Co-owner",
+							'bio' 		=> "Alejandra, or Ale as she is called, is the co-owner of MicroUrb. She is from a small town in Colombia where if it wasn't grown locally, they never heard of it.",
+							'img' 		=> "ale"
 						)
+				   );
+
+	// Product Items
+	$productItems = array(
+						"bread-butter-mix" => array(
+							'title' 		=> "Bread & Butter Mix<sup>&reg;</sup>",
+							'blurb' 	=>	"Sunflower Shoots & Pea Shoots",
+							// 'img' 		=> "daniel"
+						),
+						"salad-mix" => array(
+							'title' 		=> "Salad Mix",
+							'blurb' 	=>	"Swiss Chard, Pak Choi and Radish",
+							// 'img' 		=> "daniel"
+						),
+						"spicy-mix" => array(
+							'title' 		=> "Spicy Mix",
+							'blurb' 	=>	"Daikon, Mustard and Arugula",
+							// 'img' 		=> "daniel"
+						),
+						"herbal-mix" => array(
+							'title' 		=> "Herbal Mix",
+							'blurb' 	=>	"Basil, Celery, Chervil",
+							// 'img' 		=> "daniel"
+						),
 				   );
 
 ?>
