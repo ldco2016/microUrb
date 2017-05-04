@@ -458,3 +458,14 @@ input.button.next {
 	display: inline;
 	cursor: pointer;
 }
+
+.muted {
+	color: #aaa;
+}
+
+.panel {
+	border:1px solid #ddd;
+	background:#f0f0f0;
+	margin-bottom: 20px;
+	padding: 20px;
+}

@@ -1,43 +1,13 @@
-<?php 
+<?php
+
+	session_start();
+
+	$errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
+	$fields = isset($_SESSION['fields']) ? $_SESSION['fields'] : [];
 	
 	define("TITLE", "Contact Us | MicroUrb");
 
-	include('includes/header.php'); 
-
-	/*
-		NOTE:
-		In the form in contact.php, the name text field has
-
-		PHP used in this script:
-
-		pre_match()
-		- Perform a regular expression match
-		- http://ca2.php.net/preg_match
-
-		$_POST
-		- An associative array of variables passed to the current script via the HTTP POST method.
-		- http://www.php.net/manual/en/reserved.variables.post.php
-
-		trim()
-		- Strip whitespace (or other characters) from the beginning and end of a string
-		- http://www.php.net/manual/en/function.trim.php
-
-		exit
-		- output a message and terminate the current script
-		- http://www.php.net/manual/en/function.exit.php
-
-		die()
-		- Equivalent to exit
-		- http://ca1.php.net/manual/en/function.die.php
-
-		wordwrap()
-		- Wraps a string to a given number of characters
-		- http://ca1.php.net/manual/en/function.wordwrap.php
-
-		mail()
-		- Send mail
-		- http://ca1.php.net/manual/en/function.mail.php
-	*/
+	include('includes/header.php');
 
 ?>
 
@@ -45,48 +15,36 @@
 		<hr>
 		<h1 class="contact">Get in touch with us!</h1>
 
-		<?php 
+		<?php if (!empty($errors)): ?>
+			<div class="panel">
+				<ul><li><?php echo implode('</li><li>', $errors); ?></li></ul>
+			</div>
+		<?php endif ?>
 
-			// Check for header injections
-			function has_header_injection($str) {
-				return preg_match("/[\r\n]/", $str);
-			}
+			<form method="post" action="form.php" id="contact-form">
+				<label for="name">Your name</label>
+				<input type="text" id="name" name="name" autocomplete="off">
 
-			if (isset($_POST['contact_submit'])) {
-				$name 	= trim($_POST['name']);
-				$email 	= trim($_POST['email']);
-				$msg 	= $_POST['message'];
+				<label for="email">Your email</label>
+				<input type="email" id="email" name="email" autocomplete="off">
 
-				// Check to see if $name or $email have header injections
-				if (has_header_injection($name) || has_header_injection($email)) {
-					die(); // If true, kill the script
-				}
+				<label for="message">and your message</label>
+				<textarea id="message" name="message"></textarea>
 
-				if (!$name || !$email || !$msg) {
-					echo '<h4 class="error">All fields required.</h4><a href="contact.php" class="button block">Go back and try again</a>';
-					exit;
-				}
-			}
+				<input type="submit" class="button next" name="contact_submit" value="Send Message">
+				
+			</form>
+		
 
-		?>
+		<hr>
 
-		<form method="post" action="" id="contact-form">
-			<label for="name">Your name</label>
-			<input type="text" id="name" name="name">
-
-			<label for="email">Your email</label>
-			<input type="email" id="email" name="email">
-
-			<label for="message">and your message</label>
-			<textarea id="message" name="message"></textarea>
-
-			<input type="checkbox" id="subscribe" name="name" value="Subscribe">
-			<label for="">Subscribe to newsletter</label>
-
-			<input type="submit" class="button next" name="contact_submit" value="Send Message">
-			
-		</form>
 	</div>
 
+	<?php 
+
+		unset($_SESSION['errors']);
+		unset($_SESSION['fields']);
+
+	?>
 
 <?php include('includes/footer.php'); ?>
